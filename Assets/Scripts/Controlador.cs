@@ -20,9 +20,8 @@ public class Controlador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        posicionInicial -= desplazamientoX * ((lado1/2));
-        posicionInicial += desplazamientoX;
-        posicionInicial -= desplazamientoY * ((lado2/2));
+        posicionInicial -= (desplazamientoX/2) * (lado1 - 1.5f);
+        posicionInicial -= (desplazamientoY/2) * (lado2);
         for (int i = 0; i < lado1; ++i)
         {
             GameObject.Instantiate(Ladrillo, 
