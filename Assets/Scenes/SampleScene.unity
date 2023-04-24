@@ -328,9 +328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61e9709d5e88414c9b8ae9b1f084614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lado1: 3
-  lado2: 2
-  altura: 2
+  lado1: 7
+  lado2: 5
+  altura: 10
   Ladrillo: {fileID: 1382638796075414777, guid: f5f2e97b4d931c34e85f7052462615ae, type: 3}
 --- !u!4 &988304850
 Transform:
