@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 931758273008967213}
   - component: {fileID: 3731303015951207445}
   - component: {fileID: 2388215351987477834}
+  - component: {fileID: 2547689739053924106}
   m_Layer: 0
   m_Name: Pajaroto
   m_TagString: Untagged
@@ -323,6 +324,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: -0.15, z: 0.4}
+--- !u!114 &2547689739053924106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269087172058262778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1477ce3541ccf40a2683351abd950d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3475162978845566548
 GameObject:
   m_ObjectHideFlags: 0

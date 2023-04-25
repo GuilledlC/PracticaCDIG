@@ -7,24 +7,37 @@ public class ScriptLanzador : MonoBehaviour
 {
     public GameObject Proyectil;
     public int force;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            GameObject pajaroto = Instantiate(Proyectil, transform.position, new Quaternion());
-            pajaroto.GetComponent<Rigidbody>().
-                AddForce(transform.forward*force, ForceMode.Impulse);
-            //pajaroto.GetComponent<Rigidbody>().
-              //  AddForce();
-
+            Disparar();
         }
+    }
+
+    private void Disparar()
+    {
+        GameObject pajaroto = Instantiate(Proyectil, transform.position, new Quaternion());
+
+        //Impulse
+        pajaroto.GetComponent<Rigidbody>().
+            AddForce(transform.forward * force, ForceMode.Impulse);
+            
+        //Torque
+        pajaroto.GetComponent<Rigidbody>().
+            AddTorque(transform.up * (Random.Range(-1, 1) * force));
+        pajaroto.GetComponent<Rigidbody>().
+            AddTorque(transform.right * (Random.Range(-1, 1) * force));
+        pajaroto.GetComponent<Rigidbody>().
+            AddTorque(transform.forward * (Random.Range(-1, 1) * force));
     }
 }
