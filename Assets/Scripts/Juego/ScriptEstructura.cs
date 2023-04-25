@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controlador : MonoBehaviour
+public class ScriptEstructura : MonoBehaviour
 {
     public int lado1;
     public int lado2;

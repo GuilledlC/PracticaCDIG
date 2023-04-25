@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ScriptColor : MonoBehaviour
+public class ScriptColorLadrillo : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
