@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MostrarValorPorcentaje : MonoBehaviour
 {
-    private Text porcentaje;
+    private TextMeshProUGUI porcentaje;
 
     void Start()
     {
-        porcentaje = this.GetComponent<Text>();
+        porcentaje = this.GetComponent<TextMeshProUGUI>();
     }
-
     
     public void ActualizarTexto(float valor)
     {
