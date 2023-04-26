@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3867012104410979259}
   - component: {fileID: 5460664120028343138}
   - component: {fileID: 4527886931339873742}
-  - component: {fileID: 2160156480289512457}
   m_Layer: 0
   m_Name: Ladrillo
   m_TagString: Untagged
@@ -126,16 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6013ed107366e114f9d7c43a680d5c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2160156480289512457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382638796075414777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74825214b84f5274e862e5fc20ee6f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  LadrilloFantasma: {fileID: 701185197278083682, guid: 081889d349c9ef445afb4065d429ceb6, type: 3}

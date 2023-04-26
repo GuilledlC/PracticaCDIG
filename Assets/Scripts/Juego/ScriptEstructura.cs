@@ -9,8 +9,9 @@ public class ScriptEstructura : MonoBehaviour
     public int altura;
 
     public GameObject Ladrillo;
+    public GameObject LadrilloFantasma;
 
-    private Vector3 posicionInicial = new Vector3(0, 0.5F, 0);
+    private Vector3 posicion = new Vector3(0, 0.5F, 0);
     private readonly Vector3 desplazamientoX = new Vector3(2f, 0, 0);
     private readonly Vector3 desplazamientoZ = new Vector3(0, 0, 2f);
     private readonly Vector3 desplazamientoY = new Vector3(0, 1, 0);
@@ -32,8 +33,8 @@ public class ScriptEstructura : MonoBehaviour
 
     private void CargarEstructura()
     {
-        posicionInicial -= (desplazamientoX/2) * (lado1 - 1.5f);
-        posicionInicial -= (desplazamientoZ/2) * (lado2);
+        posicion -= (desplazamientoX/2) * (lado1 - 1.5f);
+        posicion -= (desplazamientoZ/2) * (lado2);
         
         for (int i = 0; i < altura; ++i)
         {
@@ -41,70 +42,76 @@ public class ScriptEstructura : MonoBehaviour
                 CargarPiso0();
             else
                 CargarPiso1();
-            posicionInicial += desplazamientoY;
+            posicion += desplazamientoY;
         }
     }
-
+    
     private void CargarPiso0()
     {
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionX);
-            posicionInicial += desplazamientoX;
+            Crear(posicion, rotacionX);
+            posicion += desplazamientoX;
         }
-        posicionInicial -= (0.75f * desplazamientoX) - (0.75f * desplazamientoZ);
+        posicion -= (0.75f * desplazamientoX) - (0.75f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionZ);
-            posicionInicial += desplazamientoZ;
+            Crear(posicion, rotacionZ);
+            posicion += desplazamientoZ;
         }
-        posicionInicial -= (0.75f * desplazamientoZ) + (0.75f * desplazamientoX);
+        posicion -= (0.75f * desplazamientoZ) + (0.75f * desplazamientoX);
         
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionX);
-            posicionInicial -= desplazamientoX;
+            Crear(posicion, rotacionX);
+            posicion -= desplazamientoX;
         }
-        posicionInicial += (0.75f * desplazamientoX) - (0.75f * desplazamientoZ);
+        posicion += (0.75f * desplazamientoX) - (0.75f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionZ);
-            posicionInicial -= desplazamientoZ;
+            Crear(posicion, rotacionZ);
+            posicion -= desplazamientoZ;
         }
-        posicionInicial += (0.75f * desplazamientoZ) + (0.25f * desplazamientoX);
+        posicion += (0.75f * desplazamientoZ) + (0.25f * desplazamientoX);
 
     }
+    
     private void CargarPiso1()
     {
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionX);
-            posicionInicial += desplazamientoX;
+            Crear(posicion, rotacionX);
+            posicion += desplazamientoX;
         }
-        posicionInicial -= (0.25f * desplazamientoX) - (0.25f * desplazamientoZ);
+        posicion -= (0.25f * desplazamientoX) - (0.25f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionZ);
-            posicionInicial += desplazamientoZ;
+            Crear(posicion, rotacionZ);
+            posicion += desplazamientoZ;
         }
-        posicionInicial -= (0.25f * desplazamientoZ) + (0.25f * desplazamientoX);
+        posicion -= (0.25f * desplazamientoZ) + (0.25f * desplazamientoX);
         
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionX);
-            posicionInicial -= desplazamientoX;
+            Crear(posicion, rotacionX);
+            posicion -= desplazamientoX;
         }
-        posicionInicial += (0.25f * desplazamientoX) - (0.25f * desplazamientoZ);
+        posicion += (0.25f * desplazamientoX) - (0.25f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(Ladrillo, posicionInicial, rotacionZ);
-            posicionInicial -= desplazamientoZ;
+            Crear(posicion, rotacionZ);
+            posicion -= desplazamientoZ;
         }
-        posicionInicial += (0.25f * desplazamientoZ) + (0.75f * desplazamientoX);
-
+        posicion += (0.25f * desplazamientoZ) + (0.75f * desplazamientoX);
+    }
+    
+    private void Crear(Vector3 posicion, Quaternion rotacion)
+    {
+        Instantiate(Ladrillo, posicion, rotacion);
+        Instantiate(LadrilloFantasma, posicion, rotacion);
     }
 }

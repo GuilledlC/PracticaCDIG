@@ -343,10 +343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61e9709d5e88414c9b8ae9b1f084614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lado1: 1
-  lado2: 1
-  altura: 1
+  lado1: 5
+  lado2: 5
+  altura: 5
   Ladrillo: {fileID: 1382638796075414777, guid: f5f2e97b4d931c34e85f7052462615ae, type: 3}
+  LadrilloFantasma: {fileID: 701185197278083682, guid: 081889d349c9ef445afb4065d429ceb6, type: 3}
 --- !u!4 &988304850
 Transform:
   m_ObjectHideFlags: 0
