@@ -19,10 +19,10 @@ public class ScriptLadrillo : MonoBehaviour
         
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("LadrilloFantasma"))
-            GetComponent<Renderer>().material.color = Color.blue;
+        if(collision.gameObject.CompareTag("Suelo"))
+            Destroy(gameObject, 1);
     }
 
     private void AplicarColor()
