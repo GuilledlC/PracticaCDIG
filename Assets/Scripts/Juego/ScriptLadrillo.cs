@@ -21,7 +21,7 @@ public class ScriptLadrillo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Suelo"))
+        if (collision.gameObject.CompareTag("Suelo"))
             Destroy(gameObject, 1);
     }
 

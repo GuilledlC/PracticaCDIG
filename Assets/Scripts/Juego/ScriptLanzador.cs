@@ -7,6 +7,7 @@ public class ScriptLanzador : MonoBehaviour
 {
     public GameObject Proyectil;
     public int force;
+    public AudioClip Shot;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,8 @@ public class ScriptLanzador : MonoBehaviour
     {
         GameObject pajaroto = Instantiate(Proyectil, transform.position, new Quaternion());
 
+        GetComponent<AudioSource>().PlayOneShot(Shot);
+        
         //Impulse
         pajaroto.GetComponent<Rigidbody>().
             AddForce(transform.forward * force, ForceMode.Impulse);

@@ -33,29 +33,21 @@ public class ScriptEstructura : MonoBehaviour
         
     }
 
-    IEnumerator Foobar()
-    {
-        yield return new WaitForSeconds(1);
-        Instantiate(Ladrillo, posicion, rotacionX);
-        yield return new WaitForSeconds(2);
-        Instantiate(Ladrillo, posicion + desplazamientoX, rotacionX);
-    }
-    
     private void CargarEstructura()
     {
         posicion -= (desplazamientoX/2) * (lado1 - 1.5f);
         posicion -= (desplazamientoZ/2) * (lado2);
         
         //Alfombra
-        CargarPiso1(LadrilloBase, Vector3.down * 0.5f);
+        CargarPiso0(LadrilloBase, Vector3.down * 0.5f);
         
         //Estructura
         for (int i = 0; i < altura; ++i)
         {
             if(i%2 == 0)
-                CargarPiso0(Ladrillo, Vector3.up * 0.1f);
-            else
                 CargarPiso1(Ladrillo, Vector3.up * 0.1f);
+            else
+                CargarPiso0(Ladrillo, Vector3.up * 0.1f);
             posicion += desplazamientoY;
         }
     }
