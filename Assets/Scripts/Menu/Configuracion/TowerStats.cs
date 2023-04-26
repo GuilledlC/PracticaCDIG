@@ -9,6 +9,7 @@ public class TowerStats : ScriptableObject
     private int ancho;
     private int altura;
     private int porcentajeDestruccion;
+    private bool rectangulo;
 
     public int getLado()
     {
@@ -51,5 +52,22 @@ public class TowerStats : ScriptableObject
     public void setPorcentajeDestuccion(int porcentajeDestruccion)
     {
         this.porcentajeDestruccion = porcentajeDestruccion;
+    }
+    
+    
+    public bool getRectangulo()
+    {
+        return this.rectangulo;
+    }
+    
+    public void setRectangulo(bool rectangulo)
+    {
+        this.rectangulo = rectangulo;
+    }
+
+    public string mostrarEstadisticas()
+    {
+        return "lado: " + this.lado + ", ancho: " + this.ancho + ", altura: " + this.altura +
+               ", porcentaje: " + this.porcentajeDestruccion + ", esRectangulo: " + this.rectangulo;
     }
 }

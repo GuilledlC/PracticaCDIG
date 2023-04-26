@@ -20,6 +20,6 @@ public class MostrarValorPorcentaje : MonoBehaviour
     public void guardarEstadisticas()
     {
         towerStats.setPorcentajeDestuccion(int.Parse(porcentaje.text.Trim('%')));
-        print(towerStats.getPorcentajeDestuccion());
+        print("Estadisticas: " + towerStats.mostrarEstadisticas());
     }
 }
