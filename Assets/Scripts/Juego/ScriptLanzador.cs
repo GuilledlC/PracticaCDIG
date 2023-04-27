@@ -20,16 +20,14 @@ public class ScriptLanzador : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
             Disparar();
-        }
     }
 
     private void Disparar()
     {
         GameObject pajaroto = Instantiate(Proyectil, transform.position, new Quaternion());
 
-        GetComponent<AudioSource>().PlayOneShot(Shot);
+        //GetComponent<AudioSource>().PlayOneShot(Shot);
         
         //Impulse
         pajaroto.GetComponent<Rigidbody>().
