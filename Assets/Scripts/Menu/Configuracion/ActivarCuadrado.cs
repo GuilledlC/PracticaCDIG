@@ -8,6 +8,6 @@ public class ActivarCuadrado : MonoBehaviour
 
     public void cambiarEstadoACuadrado()
     {
-        towerStats.setRectangulo(false);
+        towerStats.setCuadrado(true);
     }
 }

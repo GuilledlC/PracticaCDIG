@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4527886931339873742}
   m_Layer: 0
   m_Name: Ladrillo
-  m_TagString: Untagged
+  m_TagString: Intacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,6 +55,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -109,7 +111,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -125,6 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6013ed107366e114f9d7c43a680d5c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hit: {fileID: 8300000, guid: 4490f0412b86fe74cae27843be4b5315, type: 3}
-  Destroy: {fileID: 8300000, guid: 3d7685776e8f5a14087792ef85bd4b82, type: 3}
-  SourceObject: {fileID: 6047640426141757689, guid: 0bf20666e8213034f934cec4c9759e92, type: 3}
+  stats: {fileID: 11400000, guid: 6bbadb8bb45cd4ec8aa79b7390fab068, type: 2}

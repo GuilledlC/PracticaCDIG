@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class ScriptPajaroto : MonoBehaviour
 {
+    public TowerStats stats;
+    
     public List<AudioClip> FlySounds;
     public AudioClip DeathSound;
 
@@ -15,6 +17,8 @@ public class ScriptPajaroto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stats.PajarotoLanzado();
+        
         audioSource = GetComponent<AudioSource>();
         
         Destroy(gameObject, 7);

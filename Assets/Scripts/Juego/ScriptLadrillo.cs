@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class ScriptLadrillo : MonoBehaviour
 {
+    public TowerStats stats;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,33 @@ public class ScriptLadrillo : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        stats.LadrilloDestruido();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Suelo"))
             Destroy(gameObject, 1);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Tocado"))
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            gameObject.tag = "Tocado";
+        }
+    }
+
+    private void OnCollisionStay(Collision collisionInfo)
+    {
+        if (collisionInfo.gameObject.CompareTag("Tocado"))
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            gameObject.tag = "Tocado";
+        }
     }
 
     private void AplicarColor()

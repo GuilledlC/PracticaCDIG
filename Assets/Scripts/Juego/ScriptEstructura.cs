@@ -5,9 +5,12 @@ using UnityEngine.Serialization;
 
 public class ScriptEstructura : MonoBehaviour
 {
-    public int lado1;
-    public int lado2;
-    public int altura;
+    public TowerStats stats;
+    
+    private int lado1;
+    private int lado2;
+    private int altura;
+    private int total;
 
     public GameObject Ladrillo;
     public GameObject LadrilloBase;
@@ -23,7 +26,10 @@ public class ScriptEstructura : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(Foobar());
+        lado1 = stats.getLado();
+        lado2 = stats.getAncho();
+        altura = stats.getAlturaR();
+        this.total = (lado1 * 2 + lado2 * 2) * altura;
         CargarEstructura();
     }
 
@@ -56,28 +62,28 @@ public class ScriptEstructura : MonoBehaviour
     {
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionX);
+            Instantiate(objeto, posicion + offset, rotacionX, transform);
             posicion += desplazamientoX;
         }
         posicion -= (0.75f * desplazamientoX) - (0.75f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionZ);
+            Instantiate(objeto, posicion + offset, rotacionZ, transform);
             posicion += desplazamientoZ;
         }
         posicion -= (0.75f * desplazamientoZ) + (0.75f * desplazamientoX);
         
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionX);
+            Instantiate(objeto, posicion + offset, rotacionX, transform);
             posicion -= desplazamientoX;
         }
         posicion += (0.75f * desplazamientoX) - (0.75f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionZ);
+            Instantiate(objeto, posicion + offset, rotacionZ, transform);
             posicion -= desplazamientoZ;
         }
         posicion += (0.75f * desplazamientoZ) + (0.25f * desplazamientoX);
@@ -87,28 +93,28 @@ public class ScriptEstructura : MonoBehaviour
     {
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionX);
+            Instantiate(objeto, posicion + offset, rotacionX, transform);
             posicion += desplazamientoX;
         }
         posicion -= (0.25f * desplazamientoX) - (0.25f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionZ);
+            Instantiate(objeto, posicion + offset, rotacionZ, transform);
             posicion += desplazamientoZ;
         }
         posicion -= (0.25f * desplazamientoZ) + (0.25f * desplazamientoX);
         
         for (int i = 0; i < lado1; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionX);
+            Instantiate(objeto, posicion + offset, rotacionX, transform);
             posicion -= desplazamientoX;
         }
         posicion += (0.25f * desplazamientoX) - (0.25f * desplazamientoZ);
         
         for (int i = 0; i < lado2; ++i)
         {
-            Instantiate(objeto, posicion + offset, rotacionZ);
+            Instantiate(objeto, posicion + offset, rotacionZ, transform);
             posicion -= desplazamientoZ;
         }
         posicion += (0.25f * desplazamientoZ) + (0.75f * desplazamientoX);

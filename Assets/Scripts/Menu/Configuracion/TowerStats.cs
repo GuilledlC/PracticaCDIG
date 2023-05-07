@@ -5,12 +5,32 @@ using UnityEngine;
 [CreateAssetMenu]
 public class TowerStats : ScriptableObject
 {
-    private int lado;
-    private int ancho;
-    private int altura;
-    private int porcentajeDestruccion;
-    private bool rectangulo;
+    private int ladoC = 6;
+    private int alturaC = 20;
+    
+    private int lado = 10;
+    private int ancho = 5;
+    private int alturaR = 10;
+    
+    private int porcentajeDestruccion = 90;
+    
+    private bool cuadrado = true;
+    
+    private int total = 0;
+    private int destruidos = 0;
+    private int pajarotos = 0;
 
+    public void LadrilloDestruido()
+    {
+        destruidos++;
+    }
+
+    public void PajarotoLanzado()
+    {
+        pajarotos++;
+        Debug.Log(pajarotos);
+    }
+    
     public int getLado()
     {
         return this.lado;
@@ -19,6 +39,16 @@ public class TowerStats : ScriptableObject
     public void setLado(int lado)
     {
         this.lado = lado;
+    }
+    
+    public int getLadoC()
+    {
+        return this.ladoC;
+    }
+    
+    public void setLadoC(int ladoC)
+    {
+        this.ladoC = ladoC;
     }
     
     
@@ -33,14 +63,24 @@ public class TowerStats : ScriptableObject
     }
     
     
-    public int getAltura()
+    public int getAlturaC()
     {
-        return this.altura;
+        return this.alturaC;
     }
 
-    public void setAltura(int altura)
+    public void setAlturaC(int alturaC)
     {
-        this.altura = altura;
+        this.alturaC = alturaC;
+    }
+    
+    public int getAlturaR()
+    {
+        return this.alturaR;
+    }
+
+    public void setAlturaR(int alturaR)
+    {
+        this.alturaR = alturaR;
     }
     
     
@@ -55,19 +95,25 @@ public class TowerStats : ScriptableObject
     }
     
     
-    public bool getRectangulo()
+    public bool getCuadrado()
     {
-        return this.rectangulo;
+        return this.cuadrado;
     }
     
-    public void setRectangulo(bool rectangulo)
+    public void setCuadrado(bool cuadrado)
     {
-        this.rectangulo = rectangulo;
+        this.cuadrado = cuadrado;
+    }
+
+    public void setTotal(int total)
+    {
+        this.total = total;
     }
 
     public string mostrarEstadisticas()
     {
-        return "lado: " + this.lado + ", ancho: " + this.ancho + ", altura: " + this.altura +
-               ", porcentaje: " + this.porcentajeDestruccion + ", esRectangulo: " + this.rectangulo;
+        return "RECTANGULO: lado: " + this.lado + ", ancho: " + this.ancho + ", altura: " + this.alturaR
+               + "        CUADRADO: lado: " + this.ladoC + ", altura: " + this.alturaC
+               + ", destruccion: " + this.porcentajeDestruccion;
     }
 }

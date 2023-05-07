@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
+  - LadrilloFantasma
+  - Intacto
+  - Tocado
   layers:
   - Default
   - TransparentFX
