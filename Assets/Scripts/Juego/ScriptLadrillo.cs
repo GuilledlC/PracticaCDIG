@@ -21,15 +21,10 @@ public class ScriptLadrillo : MonoBehaviour
         
     }
 
-    private void OnDestroy()
+    private void OnTriggerExit(Collider other)
     {
-        stats.LadrilloDestruido();
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Suelo"))
-            Destroy(gameObject, 1);
+        if(other.gameObject.CompareTag("Trigger"))
+            stats.LadrilloDestruido();
     }
 
     private void OnTriggerEnter(Collider other)
