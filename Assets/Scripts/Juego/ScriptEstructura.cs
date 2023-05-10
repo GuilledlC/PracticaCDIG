@@ -14,6 +14,7 @@ public class ScriptEstructura : MonoBehaviour
 
     public GameObject Ladrillo;
     public GameObject LadrilloBase;
+    public GameObject LadrilloTrigger;
 
     private Vector3 posicion = new Vector3(0, 0.5F, 0);
     private readonly Vector3 desplazamientoX = new Vector3(2f, 0, 0);
@@ -29,7 +30,8 @@ public class ScriptEstructura : MonoBehaviour
         lado1 = stats.getLado();
         lado2 = stats.getAncho();
         altura = stats.getAlturaR();
-        this.total = (lado1 * 2 + lado2 * 2) * altura;
+        total = (lado1 * 2 + lado2 * 2) * altura;
+        CargarTriggers();
         CargarEstructura();
     }
 
@@ -118,5 +120,24 @@ public class ScriptEstructura : MonoBehaviour
             posicion -= desplazamientoZ;
         }
         posicion += (0.25f * desplazamientoZ) + (0.75f * desplazamientoX);
+    }
+
+    private void CargarTriggers()
+    {
+        GameObject trigger1 = Instantiate(LadrilloTrigger, posicion, rotacionX, transform);
+        trigger1.transform.localScale += new Vector3((lado1 - 1.5f) * 2, altura - 1, 0);
+        trigger1.transform.position += new Vector3(0, (altura/2) - 0.4f, lado2);
+        
+        GameObject trigger2 = Instantiate(LadrilloTrigger, posicion, rotacionX, transform);
+        trigger2.transform.localScale += new Vector3((lado1 - 1.5f) * 2, altura - 1, 0);
+        trigger2.transform.position += new Vector3(0, (altura/2) - 0.4f, -lado2);
+        
+        GameObject trigger3 = Instantiate(LadrilloTrigger, posicion, rotacionZ, transform);
+        trigger3.transform.localScale += new Vector3((lado2 - 1.5f) * 2, altura - 1, 0);
+        trigger3.transform.position += new Vector3(lado1, (altura/2) - 0.4f, 0);
+        
+        GameObject trigger4 = Instantiate(LadrilloTrigger, posicion, rotacionZ, transform);
+        trigger4.transform.localScale += new Vector3((lado2 - 1.5f) * 2, altura - 1, 0);
+        trigger4.transform.position += new Vector3(-lado1, (altura/2) - 0.4f, 0);
     }
 }
