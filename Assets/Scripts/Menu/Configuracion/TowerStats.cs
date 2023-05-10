@@ -16,9 +16,8 @@ public class TowerStats : ScriptableObject
     
     private bool cuadrado = true;
     
-    private int total = 0;
-    private int destruidos = 0;
-    private int pajarotos = 0;
+    public int destruidos = 0;
+    public int pajarotos = 0;
 
     public void LadrilloDestruido()
     {
@@ -103,11 +102,6 @@ public class TowerStats : ScriptableObject
     public void setCuadrado(bool cuadrado)
     {
         this.cuadrado = cuadrado;
-    }
-
-    public void setTotal(int total)
-    {
-        this.total = total;
     }
 
     public string mostrarEstadisticas()
