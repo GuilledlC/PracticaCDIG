@@ -36,7 +36,7 @@ public class ScriptLadrillo : MonoBehaviour
             
         if (other.gameObject.CompareTag("Trigger") && !fuera)
         {
-            print("adios");
+            //print("adios");
             stats.LadrilloDestruido();
             fuera = true;
         }

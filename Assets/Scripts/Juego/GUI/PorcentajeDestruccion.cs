@@ -10,8 +10,8 @@ public class PorcentajeDestruccion : MonoBehaviour
     private int resultado = 0;
     public GameObject rectangulo;
     public GameObject cuadrado;
-
     public TowerStats towerStats;
+    public bool change;
     void Start()
     {
         valor = this.GetComponent<TextMeshProUGUI>();
@@ -29,14 +29,9 @@ public class PorcentajeDestruccion : MonoBehaviour
             resultado = Mathf.RoundToInt((towerStats.destruidos / (float) towerStats.totalC) * 100);
             valor.text = resultado + "%";
         }
-        else
+        else if(change)
         {
             valor.text = "NO";
-        }
-
-        if (towerStats.getPorcentajeDestuccion() <= resultado)
-        {
-            SceneManager.LoadScene("Menu Principal");
         }
     }
 }
