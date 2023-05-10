@@ -9,23 +9,7 @@ public class ScriptLanzador : MonoBehaviour
     public int force;
     public AudioClip Shot;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Disparar();
-        }
-    }
-
-    private void Disparar()
+    public void Disparar()
     {
         GameObject pajaroto = Instantiate(Proyectil, transform.position, new Quaternion());
 

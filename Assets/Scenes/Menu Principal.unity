@@ -2203,7 +2203,7 @@ GameObject:
   - component: {fileID: 658263143}
   - component: {fileID: 658263142}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Titulo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2541,7 +2541,7 @@ GameObject:
   - component: {fileID: 726339278}
   - component: {fileID: 726339277}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
