@@ -8,7 +8,6 @@ public class ScriptEstructuraC : MonoBehaviour
     
     private int lado;
     private int altura;
-    private int total;
 
     public GameObject Ladrillo;
     public GameObject LadrilloBase;
@@ -27,7 +26,7 @@ public class ScriptEstructuraC : MonoBehaviour
     {
         lado = stats.getLadoC();
         altura = stats.getAlturaC();
-        total = lado * 4 * altura;
+        stats.totalC = lado * 4 * altura;
         CargarTriggers();
         CargarEstructura();
     }

@@ -9,6 +9,10 @@ using Random = UnityEngine.Random;
 public class ScriptLadrillo : MonoBehaviour
 {
     public TowerStats stats;
+    private bool fuera = false;
+
+    private bool hasEnteredOnce = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +27,19 @@ public class ScriptLadrillo : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.CompareTag("Trigger"))
+        if (!hasEnteredOnce)
+        {
+            hasEnteredOnce = true;
+            return;
+        }
+            
+            
+        if (other.gameObject.CompareTag("Trigger") && !fuera)
+        {
+            print("adios");
             stats.LadrilloDestruido();
+            fuera = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,6 +49,7 @@ public class ScriptLadrillo : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = false;
             gameObject.tag = "Tocado";
         }
+
     }
 
     private void OnCollisionStay(Collision collisionInfo)

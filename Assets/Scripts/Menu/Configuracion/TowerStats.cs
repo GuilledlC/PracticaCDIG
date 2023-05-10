@@ -19,6 +19,9 @@ public class TowerStats : ScriptableObject
     public int destruidos = 0;
     public int pajarotos = 0;
 
+    public int totalC;
+    public int totalR;
+
     public void LadrilloDestruido()
     {
         destruidos++;
