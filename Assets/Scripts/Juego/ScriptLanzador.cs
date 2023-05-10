@@ -11,7 +11,8 @@ public class ScriptLanzador : MonoBehaviour
 
     public void Disparar()
     {
-        GameObject pajaroto = Instantiate(Proyectil, transform.position, new Quaternion());
+        Vector3 pos = transform.position + Vector3.down;
+        GameObject pajaroto = Instantiate(Proyectil, pos, new Quaternion());
 
         GetComponent<AudioSource>().PlayOneShot(Shot);
         
