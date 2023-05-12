@@ -1743,13 +1743,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: shield
+  mTrackableName: billete
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/AvesEnojadas.xml
-  mAspectRatio: 1
+  mDataSetPath: Vuforia/DemoAR.xml
+  mAspectRatio: 0.7222787
   mImageTargetType: 0
-  mWidth: 8
-  mHeight: 8
+  mWidth: 13
+  mHeight: 9.389624
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1786,8 +1786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1040235556}
   mHiddenRoot: {fileID: 0}
-  mTargetName: shield
-  mDatasetName: Vuforia/AvesEnojadas.xml
+  mTargetName: billete
+  mDatasetName: Vuforia/DemoAR.xml
   mCastedBehaviour: {fileID: 1040235556}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -3080,13 +3080,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: castle
+  mTrackableName: as_picas
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/AvesEnojadas.xml
-  mAspectRatio: 1
+  mDataSetPath: Vuforia/DemoAR.xml
+  mAspectRatio: 1.3865955
   mImageTargetType: 0
-  mWidth: 8
-  mHeight: 8
+  mWidth: 6.2
+  mHeight: 8.596891
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -3123,8 +3123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1981651961}
   mHiddenRoot: {fileID: 0}
-  mTargetName: castle
-  mDatasetName: Vuforia/AvesEnojadas.xml
+  mTargetName: as_picas
+  mDatasetName: Vuforia/DemoAR.xml
   mCastedBehaviour: {fileID: 1981651961}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
