@@ -26,7 +26,12 @@ public class ScriptDropper : MonoBehaviour
     {
         GameObject foo = Instantiate(objeto, transform.position, transform.rotation);
         foo.tag = "Untagged";
+        foo.GetComponent<AudioSource>().mute = true;
+        
+        //Impulse
         foo.GetComponent<Rigidbody>().AddForce(transform.right * 10, ForceMode.Impulse);
+        
+        //Torque
         foo.GetComponent<Rigidbody>().
             AddTorque(transform.up * (Random.Range(-1, 1) * 250));
         foo.GetComponent<Rigidbody>().

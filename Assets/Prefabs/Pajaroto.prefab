@@ -265,10 +265,10 @@ GameObject:
   - component: {fileID: 4200974877989510093}
   - component: {fileID: 931758273008967213}
   - component: {fileID: 2388215351987477834}
+  - component: {fileID: 8651238361399877191}
   - component: {fileID: 3731303015951207445}
   - component: {fileID: -5852179207012623600}
   - component: {fileID: 2547689739053924106}
-  - component: {fileID: 8651238361399877191}
   m_Layer: 0
   m_Name: Pajaroto
   m_TagString: Tocado
@@ -319,6 +319,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: -0.15, z: 0.4}
+--- !u!135 &8651238361399877191
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269087172058262778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3731303015951207445
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -452,19 +465,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca2139d5747219d4f82aeb5066946c63, type: 3}
   - {fileID: 8300000, guid: c1ef54443a716c94d88e093d9c5aa25f, type: 3}
   DeathSound: {fileID: 8300000, guid: bd735417ee547474e98b488079ef5fe3, type: 3}
---- !u!135 &8651238361399877191
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3269087172058262778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3475162978845566548
 GameObject:
   m_ObjectHideFlags: 0

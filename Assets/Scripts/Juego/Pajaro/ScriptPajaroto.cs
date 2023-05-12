@@ -13,6 +13,7 @@ public class ScriptPajaroto : MonoBehaviour
     public AudioClip DeathSound;
 
     private AudioSource audioSource;
+    private bool muted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +26,16 @@ public class ScriptPajaroto : MonoBehaviour
         audioSource.PlayOneShot(FlySounds[Random.Range(0, FlySounds.Count)]);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (audioSource.mute == true)
+            muted = true;
     }
 
     private void OnDestroy()
     {
-        AudioSource.PlayClipAtPoint(DeathSound, transform.position, 200);
+        if(!muted)
+            AudioSource.PlayClipAtPoint(DeathSound, transform.position, 200);
     }
 
     private void OnCollisionEnter(Collision other)
