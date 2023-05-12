@@ -16,7 +16,7 @@ public class ScriptLanzador : MonoBehaviour
     {
         Vector3 pos = transform.position + Vector3.down;
         GameObject proyectil;
-        if (Random.value > 0.95F)
+        if (Random.value > 0.9F)
             proyectil = Instantiate(Cerdaco, pos, new Quaternion());
         else
         {

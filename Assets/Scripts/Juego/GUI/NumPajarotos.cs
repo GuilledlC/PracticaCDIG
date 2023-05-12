@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class NumPajarotos : MonoBehaviour
 {
     private TextMeshProUGUI valor;
-    private int resultado = 0;
 
     public TowerStats towerStats;
     void Start()
