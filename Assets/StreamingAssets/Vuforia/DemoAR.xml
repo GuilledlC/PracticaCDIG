@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="Shield" size="10.000000 10.000000" />
-    <ImageTarget name="Castle" size="10.000000 10.000000" />
+    <ImageTarget name="CastilloRosa" size="20.000000 12.500000" />
+    <ImageTarget name="CastilloVerde" size="20.000000 11.156250" />
     <ImageTarget name="billete" size="13.000000 9.389624" />
     <ImageTarget name="as_picas" size="6.200000 8.596891" />
     <ImageTarget name="as_oros" size="6.200000 9.222301" />
