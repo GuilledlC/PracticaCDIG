@@ -247,7 +247,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 2800000, guid: 8c2b2e6f2eba14b42b4967ec88bb3b97, type: 3}
+  androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: C:/Users/Guille/Desktop/DemoAR/user.keystore
   AndroidKeyaliasName: guille
   AndroidBuildApkPerCpuArchitecture: 0

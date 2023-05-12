@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class ScriptPajaroto : MonoBehaviour
+public class ScriptPajarotoCerdaco : MonoBehaviour
 {
     public TowerStats stats;
     
     public List<AudioClip> FlySounds;
     public AudioClip DeathSound;
-
+    public int deathTime = 7;
+    
     private AudioSource audioSource;
     private bool muted = false;
 
@@ -22,7 +23,7 @@ public class ScriptPajaroto : MonoBehaviour
         
         audioSource = GetComponent<AudioSource>();
         
-        Destroy(gameObject, 7);
+        Destroy(gameObject, deathTime);
         audioSource.PlayOneShot(FlySounds[Random.Range(0, FlySounds.Count)]);
     }
 
