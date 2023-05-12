@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.016357873, g: 0.015225322, b: 0.014397012, a: 1}
+  m_IndirectSpecularColor: {r: 0.016370146, g: 0.01523037, b: 0.014404907, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2756,7 +2756,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647312730}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 0, z: -84}
+  m_LocalPosition: {x: 0, y: 0, z: -36}
   m_LocalScale: {x: 0.06014066, y: 0.06014066, z: 0.06014066}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2768,7 +2768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -118.6}
+  m_AnchoredPosition: {x: 0, y: -62}
   m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1647312735
@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86aa2f538dcb641b5a087a3ddaec4552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
+  velocidad: 10
 --- !u!1 &1656702134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6720414154115649159, guid: 363146ba633b5c84697abd38d2fb4812, type: 3}

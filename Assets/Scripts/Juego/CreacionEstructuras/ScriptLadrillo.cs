@@ -10,13 +10,15 @@ public class ScriptLadrillo : MonoBehaviour
 {
     public TowerStats stats;
     private bool fuera = false;
-
-    private bool hasEnteredOnce = false;
+    private Rigidbody rbLadrillo;
+    
     
     // Start is called before the first frame update
     void Start()
     {
         AplicarColor();
+        rbLadrillo = GetComponent<Rigidbody>();
+        rbLadrillo.constraints = RigidbodyConstraints.FreezeAll;
     }
 
     // Update is called once per frame
@@ -27,16 +29,8 @@ public class ScriptLadrillo : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!hasEnteredOnce)
-        {
-            hasEnteredOnce = true;
-            return;
-        }
-            
-            
         if (other.gameObject.CompareTag("Trigger") && !fuera)
         {
-            //print("adios");
             stats.LadrilloDestruido();
             fuera = true;
         }
@@ -46,7 +40,7 @@ public class ScriptLadrillo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Tocado"))
         {
-            GetComponent<Rigidbody>().isKinematic = false;
+            rbLadrillo.constraints = RigidbodyConstraints.None;
             gameObject.tag = "Tocado";
         }
 
@@ -56,7 +50,7 @@ public class ScriptLadrillo : MonoBehaviour
     {
         if (collisionInfo.gameObject.CompareTag("Tocado"))
         {
-            GetComponent<Rigidbody>().isKinematic = false;
+            rbLadrillo.constraints = RigidbodyConstraints.None;
             gameObject.tag = "Tocado";
         }
     }
