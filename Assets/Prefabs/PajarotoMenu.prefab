@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3269087172058262778, guid: 6d7c7c45132069b4384c2c47367c2568, type: 3}
       propertyPath: m_Name
-      value: Pajaroto
+      value: PajarotoMenu
       objectReference: {fileID: 0}
     - target: {fileID: 4200974877989510093, guid: 6d7c7c45132069b4384c2c47367c2568, type: 3}
       propertyPath: m_RootOrder
@@ -57,6 +57,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4200974877989510093, guid: 6d7c7c45132069b4384c2c47367c2568, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788203716225924455, guid: 6d7c7c45132069b4384c2c47367c2568, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788203716225924455, guid: 6d7c7c45132069b4384c2c47367c2568, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.016370146, g: 0.01523037, b: 0.014404907, a: 1}
+  m_IndirectSpecularColor: {r: 0.016357873, g: 0.015225322, b: 0.014397012, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1289,7 +1289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -361, y: 802}
+  m_AnchoredPosition: {x: -361, y: 1002}
   m_SizeDelta: {x: 174.8483, y: 79.7378}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777904138
@@ -3044,7 +3044,7 @@ GameObject:
   - component: {fileID: 1913418247}
   - component: {fileID: 1913418251}
   m_Layer: 5
-  m_Name: Atras
+  m_Name: GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

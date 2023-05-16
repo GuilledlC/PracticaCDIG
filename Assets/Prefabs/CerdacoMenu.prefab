@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: deathTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1864178752470818578, guid: f7f6ec0b5cd7549449a928001f1b5788, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864178752470818578, guid: f7f6ec0b5cd7549449a928001f1b5788, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7015963481546997357, guid: f7f6ec0b5cd7549449a928001f1b5788, type: 3}
       propertyPath: m_Name
       value: CerdacoMenu
