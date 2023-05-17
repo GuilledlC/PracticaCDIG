@@ -1,1 +1,2 @@
 Packages/com.ptc.vuforia.engine-10.14.4.tgz filter=lfs diff=lfs merge=lfs -text
+PracticaCDI03M.unitypackage filter=lfs diff=lfs merge=lfs -text
