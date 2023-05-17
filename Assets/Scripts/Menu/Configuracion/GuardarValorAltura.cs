@@ -15,7 +15,10 @@ public class GuardarValorAltura : MonoBehaviour
     public void GuardarEstadisticas()
     {
         //Eliminar el último caracter de la caja, ya que es extraño
-        int longitud = altura.text.Length;
-        towerStats.setAltura(int.Parse(altura.text.Trim(altura.text[longitud - 1])));
+        if (!towerStats.getCuadrado())
+        {
+            int longitud = altura.text.Length;
+            towerStats.setAlturaR(int.Parse(altura.text.Trim(altura.text[longitud - 1])));
+        }
     }
 }

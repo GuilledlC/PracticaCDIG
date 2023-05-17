@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa010f818064f4850bd2290dcd8321a3, type: 3}
   m_Name: Tower Stats
   m_EditorClassIdentifier: 
+  destruidos: 0
+  pajarotos: 0
+  totalC: 480
+  totalR: 300

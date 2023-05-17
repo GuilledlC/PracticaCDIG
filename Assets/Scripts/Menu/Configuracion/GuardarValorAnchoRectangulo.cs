@@ -14,10 +14,10 @@ public class GuardarValorAnchoRectangulo : MonoBehaviour
 
     public void GuardarEstadisticas()
     {
-        if (towerStats.getRectangulo())
+        if (!towerStats.getCuadrado())
         {
             //Eliminar el último caracter de la caja, ya que es extraño
-            int longitud = ancho.text.Length;
+            int longitud = ancho.text.Length; 
             towerStats.setAncho(int.Parse(ancho.text.Trim(ancho.text[longitud - 1])));
         }
     }

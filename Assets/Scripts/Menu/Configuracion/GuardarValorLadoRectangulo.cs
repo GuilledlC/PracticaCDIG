@@ -14,11 +14,11 @@ public class GuardarValorLadoRectangulo : MonoBehaviour
 
     public void GuardarEstadisticas()
     {
-        if (towerStats.getRectangulo())
+        if (!towerStats.getCuadrado())
         {
             //Eliminar el último caracter de la caja, ya que es extraño
             int longitud = lado.text.Length;
-            towerStats.setLado(int.Parse(lado.text.Trim(lado.text[longitud - 1])));
+            towerStats.setLado(int.Parse(lado.text.Trim(lado.text[longitud - 1]))); 
         }
     }
 }
